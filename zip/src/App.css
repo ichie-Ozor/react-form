@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+}
+.App{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(
+        rgba(225,225,225,0.7),
+        rgba(225,225,225, 0.3)
+    ),
+    url(img/pexels-julie-aagaard-2351286.jpg);
+    background-size: cover;
+    background-position: center;
+}
+form{
+    background-color: #fff;
+    padding: 0 60px;
+    border-radius: 10px;
+    opacity: 0.6;
+}
+h1{
+    color: purple;
+    text-align: center;
+}
+button{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    border: none;
+    background-color: rebeccapurple;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
