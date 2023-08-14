@@ -1,6 +1,8 @@
 const { createServer } = require('http')
 const { createAccount } = require('./API')
-const cors = require('cors')
+const cors = require('cors');
+
+
 
 
 const server = createServer((req, res) => {
@@ -27,7 +29,7 @@ const server = createServer((req, res) => {
         return;
       }
     });
-   
+
 
    switch (method) {
       case 'POST':
@@ -35,6 +37,7 @@ const server = createServer((req, res) => {
             case 'account':
                 createAccount(req, res)
                 break;
+// <<<<<<< HEAD
                 default:
                     res.writeHead(500, {'Content-Type': 'application/json'})
                     return res.end(JSON.stringify({message : 'route not found'}))
@@ -53,7 +56,15 @@ const server = createServer((req, res) => {
 //     res.end();
 //     return
 //   }
- })
+
+  //  if(path === 'account' && method === 'POST'){
+  //   createAccount(req, res)
+  //  } else {
+  //   res.writeHead(404, {'Content-Type': 'application/json'})
+  //   res.end(JSON.stringify({message: 'Route not found'}))
+  //  }
+})
+// >>>>>>> e02d442bad9e3b3f158505d968730a5bf88db3e0
 
 
 const port = 5000;

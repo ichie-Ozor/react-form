@@ -8,13 +8,12 @@ exports.createAccount = (req, res) => {
     req.on('end', () => {
         data = JSON.parse(data)
         const account = {
-            Username : data.Username,
+            Username : data.username,
             email : data.email,
             birthday: data.birthday,
             password: data.password,
             confirmPassword: data.confirmPassword
         }
-console.log(data)
         // Authentication
         if(!account.Username || !account.email  || !account.birthday  || !account.password || !account.confirmPassword){
             res.writeHead(404, {'Content-Type': 'application/json'})
@@ -33,6 +32,7 @@ console.log(data)
             
             const parsedAccount = JSON.parse(acc.toString())
             parsedAccount.push(account)
+            console.log(parsedAccount)
 
             fs.writeFile('account.json', JSON.stringify(parsedAccount), err => {
                 if(err){

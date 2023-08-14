@@ -12,7 +12,7 @@ function App() {
     confirmPassword: "",
   })
 
- console.log(values)
+//  console.log(values)
 
   const inputs = [
     {
@@ -69,15 +69,15 @@ const submitHandler = async(e) => {
   // console.log(values,'look at me here')
 
   try {
-  const response = await fetch('http://localhost:5000/account', {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(values)
-  })
-  const result = await response.json()
-  console.log("Success:", result)
+    const response = await fetch('http://localhost:5000/account', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(values),
+    });
+    const result = await response.json()
+    console.log("Success:", result)
   }catch (error){
     console.log("Error:", error)
   }
