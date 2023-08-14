@@ -5,7 +5,7 @@ import FormInput from "./components/FormInput";
 
 function App() {
   const [values, setValue] = useState({
-    username: "",
+    Username: "",
     email: "",
     birthday: "",
     password: "",
@@ -17,7 +17,7 @@ function App() {
   const inputs = [
     {
       id: 1,
-      name: "username",
+      name: "Username",
       type: "text",
       placeholder: "Username",
       errorMessage:"Username should be 3-16 characters and shouln't include any special character!",
@@ -66,7 +66,7 @@ function App() {
 
 const submitHandler = async(e) => {
   e.preventDefault()
-  console.log(values,'look at me here')
+  // console.log(values,'look at me here')
 
   try {
   const response = await fetch('http://localhost:5000/account', {

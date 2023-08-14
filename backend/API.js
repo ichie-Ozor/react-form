@@ -18,7 +18,7 @@ console.log(data)
         // Authentication
         if(!account.Username || !account.email  || !account.birthday  || !account.password || !account.confirmPassword){
             res.writeHead(404, {'Content-Type': 'application/json'})
-            return res.end(JSON.stringify({message: 'fill in the empty field'}))
+            return res.end(JSON.stringify({message: 'fill in the empty field2'}))
         }
         
         fs.readFile('account.json', 'utf8', (err, acc) => {
